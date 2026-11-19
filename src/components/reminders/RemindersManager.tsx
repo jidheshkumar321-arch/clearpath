@@ -73,7 +73,7 @@ export const RemindersManager: React.FC = () => {
 
         <button
           onClick={() => setIsCreateModalOpen(true)}
-          className="self-start sm:self-auto px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+          className="self-start sm:self-auto px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
         >
           <Plus className="w-4 h-4 text-white" />
           <span>Schedule New Reminder</span>
@@ -82,7 +82,7 @@ export const RemindersManager: React.FC = () => {
 
       {/* Notification Capability Notice */}
       <div className="p-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-zinc-300 flex items-center gap-2">
-        <Clock className="w-4 h-4 text-blue-400 shrink-0" />
+        <Clock className="w-4 h-4 text-violet-400 shrink-0" />
         <span>
           <strong className="text-[#F8FAFC]">Operational Note:</strong> Reminders operate within your local workspace view. Push and email notifications are disabled until an SMTP or SMS service is connected.
         </span>
@@ -94,7 +94,7 @@ export const RemindersManager: React.FC = () => {
           onClick={() => setActiveTab('upcoming')}
           className={`px-4 py-2 rounded-xl font-bold transition-all ${
             activeTab === 'upcoming'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -104,7 +104,7 @@ export const RemindersManager: React.FC = () => {
           onClick={() => setActiveTab('completed')}
           className={`px-4 py-2 rounded-xl font-bold transition-all ${
             activeTab === 'completed'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -116,7 +116,7 @@ export const RemindersManager: React.FC = () => {
       {activeTab === 'upcoming' ? (
         upcomingReminders.length === 0 ? (
           <div className="bg-[#171B25] rounded-3xl border border-[#252B38] p-12 text-center space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 border border-blue-500/20 mx-auto flex items-center justify-center">
+            <div className="w-12 h-12 rounded-2xl bg-violet-500/10 text-violet-400 border border-violet-500/20 mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-[#F8FAFC]">
@@ -131,27 +131,27 @@ export const RemindersManager: React.FC = () => {
             {upcomingReminders.map(rem => (
               <div
                 key={rem.id}
-                className="bg-[#171B25] rounded-2xl p-4 sm:p-5 border border-[#252B38] hover:border-[#3B82F6]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                className="bg-[#171B25] rounded-2xl p-4 sm:p-5 border border-[#252B38] hover:border-[#8B5CF6]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div className="flex items-start gap-3.5">
                   <input
                     type="checkbox"
                     checked={rem.completed}
                     onChange={() => toggleReminder(rem.id)}
-                    className="mt-1 w-4 h-4 text-blue-600 rounded bg-[#10131A] border-[#252B38] focus:ring-blue-500 cursor-pointer"
+                    className="mt-1 w-4 h-4 text-violet-600 rounded bg-[#10131A] border-[#252B38] focus:ring-violet-500 cursor-pointer"
                   />
                   <div>
                     <h3 className="text-sm font-bold text-[#F8FAFC] leading-snug">
                       {rem.description}
                     </h3>
                     <div className="flex flex-wrap items-center gap-3 mt-1.5 text-xs text-[#A1A1AA]">
-                      <span className="font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded">
+                      <span className="font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2.5 py-0.5 rounded">
                         Due: {formatDate(rem.reminder_date)}
                       </span>
                       {rem.case_title && (
                         <button
                           onClick={() => openCaseWorkspace(rem.case_id)}
-                          className="hover:text-blue-400 underline truncate max-w-xs text-[11px] transition-colors"
+                          className="hover:text-violet-400 underline truncate max-w-xs text-[11px] transition-colors"
                         >
                           Case: {rem.case_title}
                         </button>
@@ -163,7 +163,7 @@ export const RemindersManager: React.FC = () => {
                 <div className="flex items-center gap-2 self-end sm:self-auto">
                   <button
                     onClick={() => toggleReminder(rem.id)}
-                    className="px-3 py-1 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-semibold text-xs transition-colors flex items-center gap-1"
+                    className="px-3 py-1 rounded-lg bg-violet-500/10 hover:bg-violet-500/20 text-violet-400 border border-violet-500/20 font-semibold text-xs transition-colors flex items-center gap-1"
                   >
                     <Check className="w-3.5 h-3.5" /> Done
                   </button>
@@ -197,7 +197,7 @@ export const RemindersManager: React.FC = () => {
                     type="checkbox"
                     checked={rem.completed}
                     onChange={() => toggleReminder(rem.id)}
-                    className="w-4 h-4 text-blue-600 rounded bg-[#171B25] border-[#252B38] cursor-pointer"
+                    className="w-4 h-4 text-violet-600 rounded bg-[#171B25] border-[#252B38] cursor-pointer"
                   />
                   <div>
                     <h3 className="text-xs font-semibold text-zinc-500 line-through">
@@ -237,7 +237,7 @@ export const RemindersManager: React.FC = () => {
             <select
               value={caseId}
               onChange={e => setCaseId(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               {cases.map(c => (
                 <option key={c.id} value={c.id}>
@@ -256,7 +256,7 @@ export const RemindersManager: React.FC = () => {
               required
               value={reminderDate}
               onChange={e => setReminderDate(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -270,7 +270,7 @@ export const RemindersManager: React.FC = () => {
               value={description}
               onChange={e => setDescription(e.target.value)}
               placeholder="e.g. Check tracking portal or send escalation email if 48-hour SLA has passed..."
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -284,7 +284,7 @@ export const RemindersManager: React.FC = () => {
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Create Reminder
             </button>

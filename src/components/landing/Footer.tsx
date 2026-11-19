@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
                   signIn('demo.user@clearpath.workspace', 'Arjun Mehta', 'individual');
                   setCurrentView('dashboard');
                 }}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base shadow-[0_0_25px_rgba(59,130,246,0.35)] transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-base shadow-[0_0_25px_rgba(139, 92, 246,0.35)] transition-all flex items-center justify-center gap-2"
               >
                 <span>Launch Free Demo Workspace</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-[#A1A1AA] leading-relaxed">
               CLEARPATH is an independent personal and small-business issue-resolution workspace. Organise unresolved problems, maintain evidence and timelines, and track progress calmly.
             </p>
-            <div className="flex items-center gap-2 text-xs text-blue-400 font-medium">
+            <div className="flex items-center gap-2 text-xs text-violet-400 font-medium">
               <ShieldCheck className="w-4 h-4" />
               <span>Independent & Confidential</span>
             </div>
@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
                   href="https://consumerhelpline.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                  className="hover:text-violet-400 transition-colors inline-flex items-center gap-1.5"
                 >
                   National Consumer Helpline <ExternalLink className="w-3 h-3 text-zinc-500" />
                 </a>
@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
                   href="https://e-jagriti.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                  className="hover:text-violet-400 transition-colors inline-flex items-center gap-1.5"
                 >
                   e-Jagriti (Consumer Courts) <ExternalLink className="w-3 h-3 text-zinc-500" />
                 </a>
@@ -184,7 +184,7 @@ export const Footer: React.FC = () => {
                   href="https://pgportal.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                  className="hover:text-violet-400 transition-colors inline-flex items-center gap-1.5"
                 >
                   CPGRAMS Public Grievance <ExternalLink className="w-3 h-3 text-zinc-500" />
                 </a>
@@ -194,7 +194,7 @@ export const Footer: React.FC = () => {
                   href="https://cybercrime.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5"
+                  className="hover:text-violet-400 transition-colors inline-flex items-center gap-1.5"
                 >
                   National Cybercrime Reporting <ExternalLink className="w-3 h-3 text-zinc-500" />
                 </a>

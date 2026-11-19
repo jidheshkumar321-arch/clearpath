@@ -91,9 +91,9 @@ export const Sidebar: React.FC = () => {
         <div>
           <button
             onClick={() => setCurrentView('create-case')}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(59,130,246,0.25)] transition-all transform active:scale-[0.98]"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(139, 92, 246,0.25)] transition-all transform active:scale-[0.98]"
           >
-            <PlusCircle className="w-4 h-4 text-blue-200" />
+            <PlusCircle className="w-4 h-4 text-violet-200" />
             <span>Create New Case</span>
           </button>
         </div>
@@ -122,7 +122,7 @@ export const Sidebar: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <Icon
                     className={`w-4 h-4 transition-colors ${
-                      isActive ? 'text-blue-400' : 'text-zinc-500'
+                      isActive ? 'text-violet-400' : 'text-zinc-500'
                     }`}
                   />
                   <span>{item.label}</span>
@@ -131,7 +131,7 @@ export const Sidebar: React.FC = () => {
                   <span
                     className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
                       isActive
-                        ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                        ? 'bg-violet-500/20 text-violet-300 border border-violet-500/30'
                         : 'bg-[#171B25] text-zinc-400 border border-[#252B38]'
                     }`}
                   >
@@ -169,7 +169,7 @@ export const Sidebar: React.FC = () => {
 
           <div className="flex items-center justify-between text-zinc-300 font-medium">
             <span className="flex items-center gap-1.5 text-zinc-400">
-              <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+              <ShieldCheck className="w-3.5 h-3.5 text-violet-400" />
               Region:
             </span>
             <span className="font-semibold text-[#F8FAFC]">India (Standard)</span>
@@ -183,7 +183,7 @@ export const Sidebar: React.FC = () => {
                 </span>
                 <button
                   onClick={resetToSampleData}
-                  className="inline-flex items-center gap-1 text-[11px] text-blue-400 hover:text-blue-300 font-semibold underline"
+                  className="inline-flex items-center gap-1 text-[11px] text-violet-400 hover:text-violet-300 font-semibold underline"
                   title="Reload sample demonstration cases"
                 >
                   <RotateCcw className="w-3 h-3" /> Reset

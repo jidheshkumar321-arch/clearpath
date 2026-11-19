@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
 
         {/* Desktop Nav - When on Landing */}
         {isLanding ? (
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-[#A1A1AA]">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-[#A1A1AA] whitespace-nowrap">
             <a
               href="#how-it-works"
               className="hover:text-[#F8FAFC] transition-colors"
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setCurrentView('guides')}
               className="hover:text-[#F8FAFC] transition-colors flex items-center gap-1.5"
             >
-              <BookOpen className="w-4 h-4 text-blue-400" />
+              <BookOpen className="w-4 h-4 text-violet-400" />
               Process Guides
             </button>
             <a
@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
           </nav>
         ) : (
           /* Authenticated workspace top navigation shortcuts */
-          <div className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#A1A1AA]">
+          <div className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#A1A1AA] whitespace-nowrap">
             <button
               onClick={() => setCurrentView('dashboard')}
               className={`px-3 py-1.5 rounded-xl flex items-center gap-2 transition-all ${
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
                   : 'hover:bg-[#10131A] hover:text-[#F8FAFC]'
               }`}
             >
-              <LayoutDashboard className="w-4 h-4 text-blue-400" />
+              <LayoutDashboard className="w-4 h-4 text-violet-400" />
               Dashboard
             </button>
 
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
                   : 'hover:bg-[#10131A] hover:text-[#F8FAFC]'
               }`}
             >
-              <FolderKanban className="w-4 h-4 text-blue-400" />
+              <FolderKanban className="w-4 h-4 text-violet-400" />
               My Cases
             </button>
 
@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
                   : 'hover:bg-[#10131A] hover:text-[#F8FAFC]'
               }`}
             >
-              <Building2 className="w-4 h-4 text-blue-400" />
+              <Building2 className="w-4 h-4 text-violet-400" />
               Business Mode
             </button>
 
@@ -119,7 +119,7 @@ export const Navbar: React.FC = () => {
                   : 'hover:bg-[#10131A] hover:text-[#F8FAFC]'
               }`}
             >
-              <BookOpen className="w-4 h-4 text-blue-400" />
+              <BookOpen className="w-4 h-4 text-violet-400" />
               Process Guides
             </button>
           </div>
@@ -150,11 +150,11 @@ export const Navbar: React.FC = () => {
                   onClick={() => setCurrentView('settings')}
                   className="flex items-center gap-2.5 group text-left p-1 rounded-xl hover:bg-[#171B25] transition-all"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex items-center justify-center font-bold text-xs ring-1 ring-[#252B38] shadow-xs">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-600 to-purple-700 text-white flex items-center justify-center font-bold text-xs ring-1 ring-[#252B38] shadow-xs">
                     {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                   </div>
                   <div className="hidden xl:block">
-                    <div className="text-xs font-semibold text-[#F8FAFC] leading-none group-hover:text-blue-400 transition-colors">
+                    <div className="text-xs font-semibold text-[#F8FAFC] leading-none group-hover:text-violet-400 transition-colors">
                       {user.name}
                     </div>
                     <div className="text-[10px] text-[#A1A1AA] mt-0.5 capitalize">
@@ -182,7 +182,7 @@ export const Navbar: React.FC = () => {
               </button>
               <button
                 onClick={() => setCurrentView('sign-up')}
-                className="text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl shadow-glow transition-all"
+                className="text-sm font-semibold bg-violet-600 hover:bg-violet-500 text-white px-4 py-2 rounded-xl shadow-glow transition-all"
               >
                 Get started
               </button>
@@ -195,7 +195,7 @@ export const Navbar: React.FC = () => {
           {user && (
             <button
               onClick={() => setCurrentView('dashboard')}
-              className="text-xs font-semibold bg-blue-600 text-white px-2.5 py-1.5 rounded-lg shadow-xs"
+              className="text-xs font-semibold bg-violet-600 text-white px-2.5 py-1.5 rounded-lg shadow-xs"
             >
               Workspace
             </button>
@@ -247,7 +247,7 @@ export const Navbar: React.FC = () => {
                   setCurrentView('guides');
                   setMobileMenuOpen(false);
                 }}
-                className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] text-blue-400 font-semibold flex items-center gap-2"
+                className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] text-violet-400 font-semibold flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" /> Process Guides (India)
               </button>
@@ -268,7 +268,7 @@ export const Navbar: React.FC = () => {
                 }}
                 className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] hover:text-[#F8FAFC] flex items-center gap-2.5"
               >
-                <LayoutDashboard className="w-4 h-4 text-blue-400" /> Dashboard
+                <LayoutDashboard className="w-4 h-4 text-violet-400" /> Dashboard
               </button>
               <button
                 onClick={() => {
@@ -277,7 +277,7 @@ export const Navbar: React.FC = () => {
                 }}
                 className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] hover:text-[#F8FAFC] flex items-center gap-2.5"
               >
-                <FolderKanban className="w-4 h-4 text-blue-400" /> My Cases
+                <FolderKanban className="w-4 h-4 text-violet-400" /> My Cases
               </button>
               <button
                 onClick={() => {
@@ -286,7 +286,7 @@ export const Navbar: React.FC = () => {
                 }}
                 className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] hover:text-[#F8FAFC] flex items-center gap-2.5"
               >
-                <Building2 className="w-4 h-4 text-blue-400" /> Small Business Workspace
+                <Building2 className="w-4 h-4 text-violet-400" /> Small Business Workspace
               </button>
               <button
                 onClick={() => {
@@ -295,7 +295,7 @@ export const Navbar: React.FC = () => {
                 }}
                 className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] hover:text-[#F8FAFC] flex items-center gap-2.5"
               >
-                <BookOpen className="w-4 h-4 text-blue-400" /> Process Guides
+                <BookOpen className="w-4 h-4 text-violet-400" /> Process Guides
               </button>
               <button
                 onClick={() => {
@@ -304,7 +304,7 @@ export const Navbar: React.FC = () => {
                 }}
                 className="text-left py-2 px-3 rounded-xl hover:bg-[#171B25] hover:text-[#F8FAFC] flex items-center gap-2.5"
               >
-                <UserIcon className="w-4 h-4 text-blue-400" /> Settings & Privacy
+                <UserIcon className="w-4 h-4 text-violet-400" /> Settings & Privacy
               </button>
             </div>
           )}
@@ -336,7 +336,7 @@ export const Navbar: React.FC = () => {
                     setCurrentView('sign-up');
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full text-center py-2 text-sm font-semibold text-white bg-blue-600 rounded-xl shadow-glow"
+                  className="w-full text-center py-2 text-sm font-semibold text-white bg-violet-600 rounded-xl shadow-glow"
                 >
                   Get started
                 </button>

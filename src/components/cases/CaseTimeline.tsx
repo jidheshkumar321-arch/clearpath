@@ -59,7 +59,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
   const getEventIcon = (type: EventType) => {
     switch (type) {
       case 'communication_sent':
-        return <Send className="w-3.5 h-3.5 text-blue-400" />;
+        return <Send className="w-3.5 h-3.5 text-violet-400" />;
       case 'communication_received':
         return <Inbox className="w-3.5 h-3.5 text-emerald-400" />;
       case 'evidence_recorded':
@@ -78,7 +78,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-blue-400" />
+            <Clock className="w-4 h-4 text-violet-400" />
             <h3 className="text-base font-bold text-[#F8FAFC]">
               Chronological Event Timeline
             </h3>
@@ -90,7 +90,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors self-start sm:self-auto shadow-sm"
+          className="px-3.5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors self-start sm:self-auto shadow-sm"
         >
           <Plus className="w-3.5 h-3.5 text-white" />
           <span>Add Timeline Event</span>
@@ -107,7 +107,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
           <ShieldCheck className="w-3 h-3 text-emerald-400" /> Verified External Source
         </span>
         <span className="inline-flex items-center gap-1">
-          <Sparkles className="w-3 h-3 text-blue-400" /> AI-Assisted Recommendation
+          <Sparkles className="w-3 h-3 text-violet-400" /> AI-Assisted Recommendation
         </span>
       </div>
 
@@ -121,11 +121,11 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
           {caseEvents.map(evt => (
             <div key={evt.id} className="relative group">
               {/* Dot Icon */}
-              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-[#10131A] border-2 border-[#252B38] flex items-center justify-center group-hover:border-blue-500 transition-colors shadow-xs">
+              <div className="absolute -left-6 top-1 w-5 h-5 rounded-full bg-[#10131A] border-2 border-[#252B38] flex items-center justify-center group-hover:border-violet-500 transition-colors shadow-xs">
                 {getEventIcon(evt.event_type)}
               </div>
 
-              <div className="bg-[#171B25] hover:border-[#3B82F6]/50 p-4 rounded-xl border border-[#252B38] transition-all space-y-2">
+              <div className="bg-[#171B25] hover:border-[#8B5CF6]/50 p-4 rounded-xl border border-[#252B38] transition-all space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[#F8FAFC] font-mono">
@@ -143,7 +143,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
                       </span>
                     )}
                     {evt.is_ai_generated && (
-                      <span className="inline-flex items-center gap-1 text-blue-400 font-semibold bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                      <span className="inline-flex items-center gap-1 text-violet-400 font-semibold bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/20">
                         <Sparkles className="w-3 h-3" /> AI Suggestion
                       </span>
                     )}
@@ -181,7 +181,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
             <select
               value={eventType}
               onChange={e => setEventType(e.target.value as EventType)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="communication_sent">Communication Sent (Email, Ticket, Notice)</option>
               <option value="communication_received">Communication Received (Support reply, Call)</option>
@@ -201,7 +201,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
               required
               value={eventDate}
               onChange={e => setEventDate(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -215,7 +215,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
               value={description}
               onChange={e => setDescription(e.target.value)}
               placeholder="e.g. Sent email to grievance officer referencing order #UL-89412... or Agent promised dispatch within 48h..."
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -228,7 +228,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
               value={sourceReference}
               onChange={e => setSourceReference(e.target.value)}
               placeholder="e.g. Support Ticket #99104, Email thread subject, or call timestamp"
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -238,7 +238,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
                 type="checkbox"
                 checked={isVerified}
                 onChange={e => setIsVerified(e.target.checked)}
-                className="w-4 h-4 text-blue-600 rounded bg-[#171B25] border-[#252B38] focus:ring-blue-500"
+                className="w-4 h-4 text-violet-600 rounded bg-[#171B25] border-[#252B38] focus:ring-violet-500"
               />
               <span className="text-xs text-zinc-300">
                 Mark as verified external record (supported by written email, printed job sheet, or courier tracking)
@@ -256,7 +256,7 @@ export const CaseTimeline: React.FC<CaseTimelineProps> = ({ currentCase, events 
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Add to Timeline
             </button>

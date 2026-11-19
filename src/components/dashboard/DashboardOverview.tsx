@@ -53,8 +53,8 @@ export const DashboardOverview: React.FC = () => {
       <div className="bg-gradient-to-r from-[#10131A] via-[#171B25] to-[#10131A] rounded-3xl p-6 sm:p-8 text-[#F8FAFC] border border-[#252B38] relative overflow-hidden shadow-2xl">
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet-400 text-xs font-semibold border border-violet-500/20">
+              <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
               <span>Personal & Business Resolution Workspace</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#F8FAFC]">
@@ -68,7 +68,7 @@ export const DashboardOverview: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => setCurrentView('create-case')}
-              className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30"
+              className="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-lg shadow-violet-600/20 hover:shadow-violet-500/30"
             >
               <PlusCircle className="w-4 h-4 text-white" />
               <span>Create New Case</span>
@@ -77,14 +77,14 @@ export const DashboardOverview: React.FC = () => {
               onClick={() => setCurrentView('guides')}
               className="px-4 py-2.5 rounded-xl bg-[#171B25] hover:bg-[#252B38] text-zinc-200 font-semibold text-sm border border-[#252B38] transition-all flex items-center gap-1.5"
             >
-              <BookOpen className="w-4 h-4 text-blue-400" />
+              <BookOpen className="w-4 h-4 text-violet-400" />
               <span>Process Guides</span>
             </button>
           </div>
         </div>
 
         {/* Ambient subtle glow */}
-        <div className="absolute right-0 top-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute right-0 top-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       {/* Metrics Row */}
@@ -92,13 +92,13 @@ export const DashboardOverview: React.FC = () => {
         {/* Metric 1 */}
         <div
           onClick={() => setCurrentView('cases')}
-          className="bg-[#171B25] p-5 rounded-2xl border border-[#252B38] hover:border-[#3B82F6]/50 transition-all cursor-pointer group"
+          className="bg-[#171B25] p-5 rounded-2xl border border-[#252B38] hover:border-[#8B5CF6]/50 transition-all cursor-pointer group"
         >
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
               Active Cases
             </span>
-            <div className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center group-hover:scale-105 transition-transform">
               <FolderKanban className="w-5 h-5" />
             </div>
           </div>
@@ -189,7 +189,7 @@ export const DashboardOverview: React.FC = () => {
             </div>
             <button
               onClick={() => setCurrentView('cases')}
-              className="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors"
+              className="text-xs font-semibold text-violet-400 hover:text-violet-300 flex items-center gap-1 transition-colors"
             >
               <span>View all cases</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -199,7 +199,7 @@ export const DashboardOverview: React.FC = () => {
           {recentlyUpdatedCases.length === 0 ? (
             /* Empty State */
             <div className="bg-[#171B25] rounded-2xl border border-[#252B38] p-12 text-center space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-400 mx-auto flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 text-violet-400 mx-auto flex items-center justify-center">
                 <FolderKanban className="w-7 h-7" />
               </div>
               <div>
@@ -211,7 +211,7 @@ export const DashboardOverview: React.FC = () => {
               <div className="flex items-center justify-center gap-3 pt-2">
                 <button
                   onClick={() => setCurrentView('create-case')}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold transition-colors"
+                  className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-xs font-semibold transition-colors"
                 >
                   Create First Case
                 </button>
@@ -233,7 +233,7 @@ export const DashboardOverview: React.FC = () => {
                   <div
                     key={c.id}
                     onClick={() => openCaseWorkspace(c.id)}
-                    className="bg-[#171B25] rounded-2xl p-5 border border-[#252B38] hover:border-[#3B82F6]/50 transition-all cursor-pointer group"
+                    className="bg-[#171B25] rounded-2xl p-5 border border-[#252B38] hover:border-[#8B5CF6]/50 transition-all cursor-pointer group"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-2">
                       <div className="flex flex-wrap items-center gap-2">
@@ -260,7 +260,7 @@ export const DashboardOverview: React.FC = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-base font-bold text-[#F8FAFC] group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-base font-bold text-[#F8FAFC] group-hover:text-violet-400 transition-colors">
                       {c.title}
                     </h3>
 
@@ -280,7 +280,7 @@ export const DashboardOverview: React.FC = () => {
                         )}
                       </div>
 
-                      <span className="text-blue-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                      <span className="text-violet-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
                         Open Workspace <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
@@ -297,14 +297,14 @@ export const DashboardOverview: React.FC = () => {
           <div className="bg-[#171B25] rounded-2xl p-6 border border-[#252B38]">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-blue-400" />
+                <Calendar className="w-4 h-4 text-violet-400" />
                 <h3 className="text-sm font-bold text-[#F8FAFC]">
                   Upcoming Follow-Ups
                 </h3>
               </div>
               <button
                 onClick={() => setCurrentView('reminders')}
-                className="text-xs text-blue-400 font-semibold hover:underline"
+                className="text-xs text-violet-400 font-semibold hover:underline"
               >
                 View all
               </button>
@@ -325,14 +325,14 @@ export const DashboardOverview: React.FC = () => {
                       type="checkbox"
                       checked={r.completed}
                       onChange={() => toggleReminder(r.id)}
-                      className="mt-0.5 rounded bg-[#171B25] border-[#252B38] text-blue-500 focus:ring-blue-500 cursor-pointer"
+                      className="mt-0.5 rounded bg-[#171B25] border-[#252B38] text-violet-500 focus:ring-violet-500 cursor-pointer"
                     />
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-[#F8FAFC] leading-snug">
                         {r.description}
                       </p>
                       <div className="flex items-center gap-2 mt-1 text-[11px] text-[#A1A1AA]">
-                        <span className="font-medium text-blue-400">
+                        <span className="font-medium text-violet-400">
                           Due: {formatDate(r.reminder_date)}
                         </span>
                         {r.case_title && (
@@ -351,8 +351,8 @@ export const DashboardOverview: React.FC = () => {
           {/* Quick Guide Spotlight */}
           <div className="bg-gradient-to-br from-[#10131A] to-[#171B25] rounded-2xl p-6 border border-[#252B38]">
             <div className="flex items-center gap-2 mb-2">
-              <BookOpen className="w-4 h-4 text-blue-400" />
-              <h3 className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <BookOpen className="w-4 h-4 text-violet-400" />
+              <h3 className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Official Guide Spotlight
               </h3>
             </div>
@@ -364,7 +364,7 @@ export const DashboardOverview: React.FC = () => {
             </p>
             <button
               onClick={() => setCurrentView('guides')}
-              className="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors"
+              className="text-xs font-bold text-violet-400 hover:text-violet-300 flex items-center gap-1 transition-colors"
             >
               <span>Explore Process Guides</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -387,7 +387,7 @@ export const DashboardOverview: React.FC = () => {
             </p>
             <button
               onClick={() => setCurrentView('business')}
-              className="w-full py-2.5 px-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 px-3 bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5"
             >
               <span>Switch to Business Mode</span>
               <ArrowRight className="w-3.5 h-3.5" />

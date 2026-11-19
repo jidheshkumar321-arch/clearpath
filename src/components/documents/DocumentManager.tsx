@@ -90,7 +90,7 @@ export const DocumentManager: React.FC = () => {
 
         <button
           onClick={() => setIsUploadModalOpen(true)}
-          className="self-start sm:self-auto px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+          className="self-start sm:self-auto px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
         >
           <UploadCloud className="w-4 h-4 text-white" />
           <span>Upload Supporting Record</span>
@@ -99,7 +99,7 @@ export const DocumentManager: React.FC = () => {
 
       {/* Security Banner */}
       <div className="p-4 bg-[#10131A] text-white rounded-2xl border border-[#252B38] flex items-start gap-3 shadow-xl">
-        <Lock className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+        <Lock className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />
         <div className="text-xs leading-relaxed space-y-1">
           <p className="font-bold text-[#F8FAFC]">
             Confidentiality & Private Bucket Architecture:
@@ -121,14 +121,14 @@ export const DocumentManager: React.FC = () => {
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search documents by name or description..."
-            className="w-full pl-9 pr-4 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-9 pr-4 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
           />
         </div>
 
         <select
           value={selectedCategory}
           onChange={e => setSelectedCategory(e.target.value)}
-          className="w-full sm:w-56 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full sm:w-56 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
         >
           <option value="all">All Document Types</option>
           <option value="receipt">Tax Invoices & Receipts</option>
@@ -161,7 +161,7 @@ export const DocumentManager: React.FC = () => {
             return (
               <div
                 key={ev.id}
-                className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#3B82F6]/50 p-5 transition-all flex flex-col justify-between space-y-4"
+                className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#8B5CF6]/50 p-5 transition-all flex flex-col justify-between space-y-4"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -174,7 +174,7 @@ export const DocumentManager: React.FC = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20 flex items-center justify-center shrink-0">
                       <FileCheck className="w-5 h-5" />
                     </div>
                     <div className="min-w-0">
@@ -192,7 +192,7 @@ export const DocumentManager: React.FC = () => {
                   {matchedCase && (
                     <button
                       onClick={() => openCaseWorkspace(matchedCase.id)}
-                      className="text-[11px] text-blue-400 hover:text-blue-300 font-semibold truncate block max-w-full text-left transition-colors"
+                      className="text-[11px] text-violet-400 hover:text-violet-300 font-semibold truncate block max-w-full text-left transition-colors"
                     >
                       Case: {matchedCase.title}
                     </button>
@@ -205,7 +205,7 @@ export const DocumentManager: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleDownload(ev)}
-                        className="p-1.5 rounded-lg text-zinc-400 hover:bg-[#10131A] hover:text-blue-400 transition-colors"
+                        className="p-1.5 rounded-lg text-zinc-400 hover:bg-[#10131A] hover:text-violet-400 transition-colors"
                         title="Download file"
                       >
                         <Download className="w-3.5 h-3.5" />
@@ -257,7 +257,7 @@ export const DocumentManager: React.FC = () => {
             <select
               value={caseId}
               onChange={e => setCaseId(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               {cases.map(c => (
                 <option key={c.id} value={c.id}>
@@ -274,7 +274,7 @@ export const DocumentManager: React.FC = () => {
             <select
               value={category}
               onChange={e => setCategory(e.target.value as any)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="receipt">Tax Invoice / Receipt</option>
               <option value="order_confirmation">Order Confirmation / Booking Slip</option>
@@ -295,7 +295,7 @@ export const DocumentManager: React.FC = () => {
               value={fileName}
               onChange={e => setFileName(e.target.value)}
               placeholder="e.g. TaxInvoice_2025_091.pdf"
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -308,7 +308,7 @@ export const DocumentManager: React.FC = () => {
               value={description}
               onChange={e => setDescription(e.target.value)}
               placeholder="e.g. Tax invoice showing purchase amount, date, and committed delivery window..."
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -322,7 +322,7 @@ export const DocumentManager: React.FC = () => {
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Upload to Vault
             </button>

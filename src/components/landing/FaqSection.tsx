@@ -35,7 +35,7 @@ export const FaqSection: React.FC = () => {
     <section className="py-20 bg-[#10131A] border-b border-[#252B38]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/25">
+          <span className="text-xs font-bold uppercase tracking-wider text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/25">
             Common Questions
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight mt-3">
@@ -56,12 +56,12 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 font-bold text-[#F8FAFC] hover:text-blue-400 transition-colors"
+                  className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 font-bold text-[#F8FAFC] hover:text-violet-400 transition-colors"
                 >
                   <span className="text-base">{faq.q}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-blue-400' : ''
+                      isOpen ? 'rotate-180 text-violet-400' : ''
                     }`}
                   />
                 </button>

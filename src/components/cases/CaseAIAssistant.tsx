@@ -70,12 +70,12 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
   return (
     <div className="bg-[#10131A] text-[#F8FAFC] rounded-3xl border border-[#252B38] shadow-2xl p-6 sm:p-8 space-y-6 relative overflow-hidden">
       {/* Subtle ambient lighting */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
       <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#252B38] pb-5">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20">
+          <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center border border-violet-500/20">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
@@ -83,7 +83,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
               <h3 className="text-lg font-bold text-[#F8FAFC] tracking-tight">
                 AI Resolution Assistant
               </h3>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20">
                 Rule-Based Verification Engine
               </span>
             </div>
@@ -98,7 +98,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           disabled={isGenerating}
           className="self-start sm:self-auto px-3.5 py-2 rounded-xl bg-[#171B25] hover:bg-[#252B38] text-zinc-300 text-xs font-semibold flex items-center gap-1.5 transition-colors border border-[#252B38]"
         >
-          <RefreshCw className={`w-3.5 h-3.5 ${isGenerating ? 'animate-spin text-blue-400' : ''}`} />
+          <RefreshCw className={`w-3.5 h-3.5 ${isGenerating ? 'animate-spin text-violet-400' : ''}`} />
           <span>Re-analyse Case</span>
         </button>
       </div>
@@ -109,7 +109,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           onClick={() => setActiveTab('summary')}
           className={`px-3 py-1.5 rounded-xl font-semibold transition-all ${
             activeTab === 'summary'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:text-white hover:bg-[#171B25]'
           }`}
         >
@@ -120,7 +120,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           onClick={() => setActiveTab('draft')}
           className={`px-3 py-1.5 rounded-xl font-semibold transition-all ${
             activeTab === 'draft'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:text-white hover:bg-[#171B25]'
           }`}
         >
@@ -131,7 +131,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           onClick={() => setActiveTab('missing')}
           className={`px-3 py-1.5 rounded-xl font-semibold transition-all flex items-center gap-1.5 ${
             activeTab === 'missing'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:text-white hover:bg-[#171B25]'
           }`}
         >
@@ -147,7 +147,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           onClick={() => setActiveTab('questions')}
           className={`px-3 py-1.5 rounded-xl font-semibold transition-all ${
             activeTab === 'questions'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:text-white hover:bg-[#171B25]'
           }`}
         >
@@ -159,7 +159,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
       {activeTab === 'summary' && (
         <div className="relative z-10 space-y-6">
           <div className="p-4 rounded-2xl bg-[#171B25] border border-[#252B38] space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400">
               Executive Case Chronology
             </h4>
             <p className="text-xs text-zinc-300 leading-relaxed font-sans">
@@ -171,7 +171,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400">
               Suggested Next Steps (Cited from Indian Regulatory Frameworks)
             </h4>
 
@@ -179,7 +179,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
               {aiOutput.suggestedSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl bg-[#171B25] border border-[#252B38] hover:border-[#3B82F6]/50 transition-all space-y-2 text-xs"
+                  className="p-4 rounded-xl bg-[#171B25] border border-[#252B38] hover:border-[#8B5CF6]/50 transition-all space-y-2 text-xs"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <span className="font-bold text-[#F8FAFC] text-sm">
@@ -187,7 +187,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                     </span>
                     <button
                       onClick={() => handleAcceptAIStep(step)}
-                      className="px-2.5 py-1 rounded bg-blue-500/15 hover:bg-blue-500/25 text-blue-400 border border-blue-500/30 font-semibold text-[11px] flex items-center gap-1 transition-colors self-start sm:self-auto"
+                      className="px-2.5 py-1 rounded bg-violet-500/15 hover:bg-violet-500/25 text-violet-400 border border-violet-500/30 font-semibold text-[11px] flex items-center gap-1 transition-colors self-start sm:self-auto"
                     >
                       <Plus className="w-3 h-3" /> Add to Action Plan
                     </button>
@@ -202,7 +202,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                       <strong className="text-zinc-300">Rationale:</strong> {step.rationale}
                     </span>
                     {step.sourceTitle && (
-                      <span className="text-blue-400 font-medium">
+                      <span className="text-violet-400 font-medium">
                         Source: {step.sourceTitle} ({step.sourceLastChecked || 'Jan 2025'})
                       </span>
                     )}
@@ -233,7 +233,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                 type="text"
                 value={customDraftSubject}
                 onChange={e => setCustomDraftSubject(e.target.value)}
-                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-1 focus:ring-blue-500 font-mono"
+                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-1 focus:ring-violet-500 font-mono"
               />
             </div>
 
@@ -244,7 +244,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                 </label>
                 <button
                   onClick={handleCopyMessage}
-                  className="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors"
+                  className="text-xs font-semibold text-violet-400 hover:text-violet-300 flex items-center gap-1 transition-colors"
                 >
                   {copiedDraft ? (
                     <>
@@ -263,7 +263,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                 rows={10}
                 value={customDraftBody}
                 onChange={e => setCustomDraftBody(e.target.value)}
-                className="w-full p-4 bg-[#090B10] border border-[#252B38] rounded-xl text-xs text-zinc-200 font-mono leading-relaxed focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full p-4 bg-[#090B10] border border-[#252B38] rounded-xl text-xs text-zinc-200 font-mono leading-relaxed focus:outline-none focus:ring-1 focus:ring-violet-500"
               />
             </div>
           </div>
@@ -273,7 +273,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
       {/* TAB 3: MISSING INFORMATION CHECKS */}
       {activeTab === 'missing' && (
         <div className="relative z-10 space-y-4">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400">
             Factual Completeness Audit
           </h4>
 
@@ -304,7 +304,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
       {/* TAB 4: RECOMMENDED QUESTIONS */}
       {activeTab === 'questions' && (
         <div className="relative z-10 space-y-4">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400">
             Recommended Questions to Ask Support Representatives
           </h4>
           <p className="text-xs text-[#A1A1AA] leading-relaxed">
@@ -317,7 +317,7 @@ export const CaseAIAssistant: React.FC<CaseAIAssistantProps> = ({
                 key={idx}
                 className="p-3 rounded-xl bg-[#171B25] border border-[#252B38] text-xs text-zinc-300 flex items-start gap-2.5"
               >
-                <HelpCircle className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <HelpCircle className="w-4 h-4 text-violet-400 shrink-0 mt-0.5" />
                 <span>{q}</span>
               </div>
             ))}

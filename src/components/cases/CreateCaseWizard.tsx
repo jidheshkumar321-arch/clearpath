@@ -197,15 +197,15 @@ export const CreateCaseWizard: React.FC = () => {
       {/* Stepper Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between text-xs font-semibold text-[#A1A1AA] mb-2">
-          <span className={step >= 1 ? 'text-blue-400 font-bold' : ''}>1. Audience</span>
-          <span className={step >= 2 ? 'text-blue-400 font-bold' : ''}>2. Category</span>
-          <span className={step >= 3 ? 'text-blue-400 font-bold' : ''}>3. Details</span>
-          <span className={step >= 4 ? 'text-blue-400 font-bold' : ''}>4. Evidence</span>
-          <span className={step >= 5 ? 'text-blue-400 font-bold' : ''}>5. Review</span>
+          <span className={step >= 1 ? 'text-violet-400 font-bold' : ''}>1. Audience</span>
+          <span className={step >= 2 ? 'text-violet-400 font-bold' : ''}>2. Category</span>
+          <span className={step >= 3 ? 'text-violet-400 font-bold' : ''}>3. Details</span>
+          <span className={step >= 4 ? 'text-violet-400 font-bold' : ''}>4. Evidence</span>
+          <span className={step >= 5 ? 'text-violet-400 font-bold' : ''}>5. Review</span>
         </div>
         <div className="w-full bg-[#252B38] h-2 rounded-full overflow-hidden">
           <div
-            className="bg-blue-500 h-full transition-all duration-300"
+            className="bg-violet-500 h-full transition-all duration-300"
             style={{ width: `${(step / 5) * 100}%` }}
           />
         </div>
@@ -216,7 +216,7 @@ export const CreateCaseWizard: React.FC = () => {
         {step === 1 && (
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Step 1 of 5
               </span>
               <h2 className="text-2xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
@@ -232,12 +232,12 @@ export const CreateCaseWizard: React.FC = () => {
                 onClick={() => setAudience('individual')}
                 className={`p-6 rounded-2xl border cursor-pointer transition-all ${
                   audience === 'individual'
-                    ? 'border-blue-500 bg-blue-500/10 shadow-lg shadow-blue-500/10'
+                    ? 'border-violet-500 bg-violet-500/10 shadow-lg shadow-violet-500/10'
                     : 'border-[#252B38] hover:border-[#323B4E] bg-[#171B25]'
                 }`}
               >
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                  audience === 'individual' ? 'bg-blue-500/20 text-blue-400' : 'bg-[#10131A] text-zinc-400 border border-[#252B38]'
+                  audience === 'individual' ? 'bg-violet-500/20 text-violet-400' : 'bg-[#10131A] text-zinc-400 border border-[#252B38]'
                 }`}>
                   <User className="w-6 h-6" />
                 </div>
@@ -247,7 +247,7 @@ export const CreateCaseWizard: React.FC = () => {
                 <p className="text-xs text-[#A1A1AA] mt-2 leading-relaxed">
                   For personal purchases, e-commerce deliveries, consumer warranties, and banking or subscription refunds.
                 </p>
-                <div className="mt-4 text-[11px] font-semibold text-blue-400">
+                <div className="mt-4 text-[11px] font-semibold text-violet-400">
                   Includes Consumer Protection Act (India) frameworks
                 </div>
               </div>
@@ -256,12 +256,12 @@ export const CreateCaseWizard: React.FC = () => {
                 onClick={() => setAudience('business')}
                 className={`p-6 rounded-2xl border cursor-pointer transition-all ${
                   audience === 'business'
-                    ? 'border-blue-500 bg-blue-500/10 shadow-lg shadow-blue-500/10'
+                    ? 'border-violet-500 bg-violet-500/10 shadow-lg shadow-violet-500/10'
                     : 'border-[#252B38] hover:border-[#323B4E] bg-[#171B25]'
                 }`}
               >
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                  audience === 'business' ? 'bg-blue-500/20 text-blue-400' : 'bg-[#10131A] text-zinc-400 border border-[#252B38]'
+                  audience === 'business' ? 'bg-violet-500/20 text-violet-400' : 'bg-[#10131A] text-zinc-400 border border-[#252B38]'
                 }`}>
                   <Building className="w-6 h-6" />
                 </div>
@@ -288,7 +288,7 @@ export const CreateCaseWizard: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
               >
                 <span>Continue to Category</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -301,7 +301,7 @@ export const CreateCaseWizard: React.FC = () => {
         {step === 2 && (
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Step 2 of 5
               </span>
               <h2 className="text-2xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
@@ -322,14 +322,14 @@ export const CreateCaseWizard: React.FC = () => {
                     onClick={() => setCategory(c.id)}
                     className={`p-4 rounded-xl border cursor-pointer transition-all flex items-start gap-3.5 ${
                       isSelected
-                        ? 'border-blue-500 bg-blue-500/10 shadow-sm'
+                        ? 'border-violet-500 bg-violet-500/10 shadow-sm'
                         : 'border-[#252B38] hover:border-[#323B4E] bg-[#171B25]'
                     }`}
                   >
                     <div
                       className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${
                         isSelected
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-violet-600 text-white'
                           : 'bg-[#10131A] text-zinc-400 border border-[#252B38]'
                       }`}
                     >
@@ -359,7 +359,7 @@ export const CreateCaseWizard: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStep(3)}
-                className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
               >
                 <span>Continue to Case Details</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -372,7 +372,7 @@ export const CreateCaseWizard: React.FC = () => {
         {step === 3 && (
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Step 3 of 5
               </span>
               <h2 className="text-2xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
@@ -411,7 +411,7 @@ export const CreateCaseWizard: React.FC = () => {
                   value={title}
                   onChange={e => setTitle(e.target.value)}
                   placeholder="e.g. Ergonomic Office Chair Delivery Delayed Past Committed Date"
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -426,7 +426,7 @@ export const CreateCaseWizard: React.FC = () => {
                     value={organisation}
                     onChange={e => setOrganisation(e.target.value)}
                     placeholder="e.g. Apex Logistics / NovaTech Corp"
-                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -439,7 +439,7 @@ export const CreateCaseWizard: React.FC = () => {
                     required
                     value={issueStartedAt}
                     onChange={e => setIssueStartedAt(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -454,7 +454,7 @@ export const CreateCaseWizard: React.FC = () => {
                   value={description}
                   onChange={e => setDescription(e.target.value)}
                   placeholder="Summarise what occurred, what was promised, and why the situation remains unresolved..."
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                 />
                 <p className="text-[11px] text-zinc-500 mt-1">
                   Do not include passwords, OTPs, or debit/credit card numbers.
@@ -470,7 +470,7 @@ export const CreateCaseWizard: React.FC = () => {
                   value={attemptedDetails}
                   onChange={e => setAttemptedDetails(e.target.value)}
                   placeholder="e.g. Raised chat ticket #4491 on Jan 12. Spoke with support rep on Jan 15 who promised follow-up..."
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -482,7 +482,7 @@ export const CreateCaseWizard: React.FC = () => {
                   <select
                     value={status}
                     onChange={e => setStatus(e.target.value as CaseStatus)}
-                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
                   >
                     <option value="in_progress">In Progress</option>
                     <option value="waiting_for_response">Waiting for Response</option>
@@ -498,7 +498,7 @@ export const CreateCaseWizard: React.FC = () => {
                   <select
                     value={priority}
                     onChange={e => setPriority(e.target.value as any)}
-                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
                   >
                     <option value="low">Low Priority</option>
                     <option value="medium">Medium Priority</option>
@@ -519,7 +519,7 @@ export const CreateCaseWizard: React.FC = () => {
               <button
                 type="button"
                 onClick={handleNextFromStep3}
-                className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
               >
                 <span>Continue to Evidence</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -532,7 +532,7 @@ export const CreateCaseWizard: React.FC = () => {
         {step === 4 && (
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Step 4 of 5
               </span>
               <h2 className="text-2xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
@@ -564,7 +564,7 @@ export const CreateCaseWizard: React.FC = () => {
                   value={orderReference}
                   onChange={e => setOrderReference(e.target.value)}
                   placeholder="e.g. UL-89412-IN or JOB-NT-774"
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm font-mono text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm font-mono text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -577,7 +577,7 @@ export const CreateCaseWizard: React.FC = () => {
                   value={targetResolution}
                   onChange={e => setTargetResolution(e.target.value)}
                   placeholder="e.g. Confirmed replacement part delivery or full refund to original payment card."
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -590,10 +590,10 @@ export const CreateCaseWizard: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleAddSimulatedFile('receipt', `${organisation.replace(/\s+/g, '_')}_TaxInvoice.pdf`)}
-                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-blue-500 bg-[#171B25] hover:bg-blue-500/5 text-left transition-all"
+                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-violet-500 bg-[#171B25] hover:bg-violet-500/5 text-left transition-all"
                   >
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#F8FAFC]">
-                      <FileText className="w-4 h-4 text-blue-400" /> + Add Tax Invoice
+                      <FileText className="w-4 h-4 text-violet-400" /> + Add Tax Invoice
                     </div>
                     <p className="text-[10px] text-[#A1A1AA] mt-1">Proof of payment / date</p>
                   </button>
@@ -601,10 +601,10 @@ export const CreateCaseWizard: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleAddSimulatedFile('photo', 'Tracking_Status_Screenshot.png')}
-                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-blue-500 bg-[#171B25] hover:bg-blue-500/5 text-left transition-all"
+                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-violet-500 bg-[#171B25] hover:bg-violet-500/5 text-left transition-all"
                   >
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#F8FAFC]">
-                      <FileCheck className="w-4 h-4 text-blue-400" /> + Add Screenshot
+                      <FileCheck className="w-4 h-4 text-violet-400" /> + Add Screenshot
                     </div>
                     <p className="text-[10px] text-[#A1A1AA] mt-1">Tracking or chat transcript</p>
                   </button>
@@ -612,10 +612,10 @@ export const CreateCaseWizard: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleAddSimulatedFile('other', 'Customer_Support_Email_Thread.pdf')}
-                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-blue-500 bg-[#171B25] hover:bg-blue-500/5 text-left transition-all"
+                    className="p-3 rounded-xl border border-dashed border-[#252B38] hover:border-violet-500 bg-[#171B25] hover:bg-violet-500/5 text-left transition-all"
                   >
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#F8FAFC]">
-                      <FileText className="w-4 h-4 text-blue-400" /> + Add Communication
+                      <FileText className="w-4 h-4 text-violet-400" /> + Add Communication
                     </div>
                     <p className="text-[10px] text-[#A1A1AA] mt-1">Previous support emails</p>
                   </button>
@@ -628,10 +628,10 @@ export const CreateCaseWizard: React.FC = () => {
                     {filesToAttach.map((f, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-between p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-xs text-[#F8FAFC]"
+                        className="flex items-center justify-between p-2.5 rounded-lg bg-violet-500/10 border border-violet-500/20 text-xs text-[#F8FAFC]"
                       >
                         <div className="flex items-center gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                          <CheckCircle2 className="w-4 h-4 text-violet-400" />
                           <span className="font-semibold text-[#F8FAFC]">{f.name}</span>
                           <span className="text-[10px] text-[#A1A1AA]">({Math.round(f.size / 1024)} KB)</span>
                         </div>
@@ -660,7 +660,7 @@ export const CreateCaseWizard: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStep(5)}
-                className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-blue-600/20 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-violet-600/20 transition-all"
               >
                 <span>Continue to Review</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -673,7 +673,7 @@ export const CreateCaseWizard: React.FC = () => {
         {step === 5 && (
           <div className="space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 Step 5 of 5
               </span>
               <h2 className="text-2xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
@@ -732,8 +732,8 @@ export const CreateCaseWizard: React.FC = () => {
               )}
             </div>
 
-            <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-xs text-blue-300 flex items-center gap-2.5">
-              <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0" />
+            <div className="p-4 rounded-xl bg-violet-500/10 border border-violet-500/20 text-xs text-violet-300 flex items-center gap-2.5">
+              <CheckCircle2 className="w-5 h-5 text-violet-400 shrink-0" />
               <span>
                 Once created, your case timeline, evidence vault, action plans, and AI assistant will be immediately ready in your dedicated workspace.
               </span>
@@ -750,7 +750,7 @@ export const CreateCaseWizard: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCreateCase}
-                className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-600/30 flex items-center gap-2 transition-all"
+                className="px-7 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm shadow-lg shadow-violet-600/30 flex items-center gap-2 transition-all"
               >
                 <span>Create Case & Open Workspace</span>
                 <ArrowRight className="w-4 h-4 text-white" />

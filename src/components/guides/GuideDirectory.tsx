@@ -27,8 +27,8 @@ export const GuideDirectory: React.FC = () => {
       {/* Header Banner */}
       <div className="bg-gradient-to-r from-[#10131A] via-[#171B25] to-[#10131A] border border-[#252B38] rounded-3xl p-6 sm:p-8 text-[#F8FAFC] shadow-2xl relative overflow-hidden">
         <div className="max-w-3xl space-y-3 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
-            <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet-400 text-xs font-semibold border border-violet-500/20">
+            <ShieldCheck className="w-3.5 h-3.5 text-violet-400" />
             <span>Verified Indian Consumer & Business Frameworks</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#F8FAFC]">
@@ -38,7 +38,7 @@ export const GuideDirectory: React.FC = () => {
             Independent procedural roadmaps citing published provisions under the Consumer Protection Act, 2019, E-Commerce Rules, and official government dispute redressal systems.
           </p>
         </div>
-        <div className="absolute right-0 top-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute right-0 top-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       {/* Mandatory Statutory Notice */}
@@ -62,7 +62,7 @@ export const GuideDirectory: React.FC = () => {
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
           placeholder="Search guides by topic (e.g. refund, courier delay, warranty, supplier)..."
-          className="w-full pl-10 pr-4 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+          className="w-full pl-10 pr-4 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
         />
       </div>
 
@@ -72,11 +72,11 @@ export const GuideDirectory: React.FC = () => {
           <div
             key={guide.id}
             onClick={() => setSelectedGuide(guide)}
-            className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#3B82F6]/50 p-6 flex flex-col justify-between cursor-pointer group transition-all"
+            className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#8B5CF6]/50 p-6 flex flex-col justify-between cursor-pointer group transition-all"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20">
                   {guide.badge}
                 </span>
                 <span className="text-[10px] text-zinc-500 font-mono">
@@ -84,7 +84,7 @@ export const GuideDirectory: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-base font-bold text-[#F8FAFC] group-hover:text-blue-400 transition-colors">
+              <h3 className="text-base font-bold text-[#F8FAFC] group-hover:text-violet-400 transition-colors">
                 {guide.title}
               </h3>
 
@@ -93,7 +93,7 @@ export const GuideDirectory: React.FC = () => {
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#252B38] flex items-center justify-between text-xs text-blue-400 font-semibold">
+            <div className="mt-6 pt-4 border-t border-[#252B38] flex items-center justify-between text-xs text-violet-400 font-semibold">
               <span>View Step-by-Step Guide</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -127,7 +127,7 @@ export const GuideDirectory: React.FC = () => {
                     href={source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 p-1 transition-colors"
+                    className="text-violet-400 hover:text-violet-300 p-1 transition-colors"
                     title="Open official site"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const GuideDirectory: React.FC = () => {
           <div className="space-y-6 text-xs text-zinc-300">
             {/* What this issue means */}
             <div className="p-4 rounded-xl bg-[#171B25] border border-[#252B38] space-y-1.5">
-              <h4 className="font-bold text-blue-400 uppercase text-[11px] tracking-wider">
+              <h4 className="font-bold text-violet-400 uppercase text-[11px] tracking-wider">
                 What this issue means
               </h4>
               <p className="leading-relaxed text-zinc-300">
@@ -172,7 +172,7 @@ export const GuideDirectory: React.FC = () => {
             {/* Checklist */}
             <div className="space-y-2">
               <h4 className="font-bold text-[#F8FAFC] uppercase text-[11px] tracking-wider flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                <CheckCircle2 className="w-4 h-4 text-violet-400" />
                 Information You Should Collect Before Proceeding
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -181,7 +181,7 @@ export const GuideDirectory: React.FC = () => {
                     key={idx}
                     className="p-2.5 rounded-lg bg-[#171B25] border border-[#252B38] flex items-start gap-2"
                   >
-                    <span className="w-4 h-4 rounded-full bg-blue-500/20 text-blue-400 text-[10px] flex items-center justify-center shrink-0 font-bold mt-0.5">
+                    <span className="w-4 h-4 rounded-full bg-violet-500/20 text-violet-400 text-[10px] flex items-center justify-center shrink-0 font-bold mt-0.5">
                       ✓
                     </span>
                     <span className="text-zinc-200 leading-snug">{item}</span>
@@ -202,7 +202,7 @@ export const GuideDirectory: React.FC = () => {
                     className="p-3.5 rounded-xl border border-[#252B38] bg-[#171B25] space-y-1.5"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded bg-blue-600 text-white font-bold text-[10px]">
+                      <span className="px-2 py-0.5 rounded bg-violet-600 text-white font-bold text-[10px]">
                         STEP {s.step}
                       </span>
                       <h5 className="font-bold text-[#F8FAFC] text-xs">
@@ -212,7 +212,7 @@ export const GuideDirectory: React.FC = () => {
                     <p className="text-zinc-300 leading-relaxed">
                       {s.description}
                     </p>
-                    <div className="text-[11px] text-blue-300 font-medium bg-blue-500/10 border border-blue-500/20 p-2 rounded">
+                    <div className="text-[11px] text-violet-300 font-medium bg-violet-500/10 border border-violet-500/20 p-2 rounded">
                       💡 <strong>Pro Tip:</strong> {s.tips}
                     </div>
                   </div>
@@ -240,7 +240,7 @@ export const GuideDirectory: React.FC = () => {
                           href={esc.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 font-semibold hover:underline flex items-center gap-1 text-[11px]"
+                          className="text-violet-400 font-semibold hover:underline flex items-center gap-1 text-[11px]"
                         >
                           Official Portal <ExternalLink className="w-3 h-3" />
                         </a>

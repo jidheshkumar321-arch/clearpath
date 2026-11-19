@@ -6,7 +6,7 @@ export const ProblemSection: React.FC = () => {
     <section className="py-20 bg-[#090B10] border-b border-[#252B38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/25">
+          <span className="text-xs font-bold uppercase tracking-wider text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/25">
             The Problem
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight mt-3">
@@ -46,7 +46,7 @@ export const ProblemSection: React.FC = () => {
 
           {/* Card 3 */}
           <div className="bg-[#171B25] rounded-2xl p-6 border border-[#252B38] hover:border-[#323B4E] transition-all">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-5">
+            <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center mb-5">
               <HelpCircle className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-[#F8FAFC] mb-2">
@@ -62,7 +62,7 @@ export const ProblemSection: React.FC = () => {
         <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#10131A] via-[#171B25] to-[#10131A] text-white border border-[#252B38] shadow-elevated">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-violet-400">
                 The CLEARPATH Solution
               </span>
               <h3 className="text-2xl font-bold text-[#F8FAFC]">
@@ -75,19 +75,19 @@ export const ProblemSection: React.FC = () => {
 
             <div className="space-y-2 text-xs font-medium text-zinc-300">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
+                <span className="w-5 h-5 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center border border-violet-500/30">
                   <Check className="w-3.5 h-3.5" />
                 </span>
                 <span>Unbroken timeline of every interaction</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
+                <span className="w-5 h-5 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center border border-violet-500/30">
                   <Check className="w-3.5 h-3.5" />
                 </span>
                 <span>AI-assisted follow-up drafts with user sign-off</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
+                <span className="w-5 h-5 rounded-full bg-violet-500/20 text-violet-400 flex items-center justify-center border border-violet-500/30">
                   <Check className="w-3.5 h-3.5" />
                 </span>
                 <span>Cited Indian statutory & consumer references</span>

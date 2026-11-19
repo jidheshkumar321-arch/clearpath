@@ -32,7 +32,7 @@ export const PasswordRecoveryView: React.FC = () => {
 
         {submitted ? (
           <div className="space-y-6 text-center">
-            <div className="w-14 h-14 rounded-2xl bg-blue-500/15 border border-blue-500/30 text-blue-400 mx-auto flex items-center justify-center">
+            <div className="w-14 h-14 rounded-2xl bg-violet-500/15 border border-violet-500/30 text-violet-400 mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <div className="space-y-2">
@@ -46,7 +46,7 @@ export const PasswordRecoveryView: React.FC = () => {
 
             <div className="p-3.5 rounded-xl bg-[#171B25] border border-[#252B38] text-left text-xs text-zinc-300">
               <div className="flex items-center gap-1.5 font-bold text-[#F8FAFC] mb-1">
-                <ShieldCheck className="w-4 h-4 text-blue-400" />
+                <ShieldCheck className="w-4 h-4 text-violet-400" />
                 <span>Security Notice:</span>
               </div>
               <p className="text-[11px] text-[#A1A1AA]">
@@ -77,14 +77,14 @@ export const PasswordRecoveryView: React.FC = () => {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   placeholder="you@domain.com"
-                  className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all"
+              className="w-full py-3 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(139, 92, 246,0.3)] transition-all"
             >
               Send Password Recovery Email
             </button>

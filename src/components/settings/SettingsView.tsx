@@ -90,7 +90,7 @@ export const SettingsView: React.FC = () => {
           onClick={() => setActiveTab('profile')}
           className={`px-4 py-2 rounded-xl font-semibold transition-all ${
             activeTab === 'profile'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -101,7 +101,7 @@ export const SettingsView: React.FC = () => {
           onClick={() => setActiveTab('privacy')}
           className={`px-4 py-2 rounded-xl font-semibold transition-all ${
             activeTab === 'privacy'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -112,7 +112,7 @@ export const SettingsView: React.FC = () => {
           onClick={() => setActiveTab('audit')}
           className={`px-4 py-2 rounded-xl font-semibold transition-all ${
             activeTab === 'audit'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -123,7 +123,7 @@ export const SettingsView: React.FC = () => {
           onClick={() => setActiveTab('legal')}
           className={`px-4 py-2 rounded-xl font-semibold transition-all ${
             activeTab === 'legal'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-violet-600 text-white shadow-sm'
               : 'text-[#A1A1AA] hover:bg-[#171B25] hover:text-white'
           }`}
         >
@@ -154,7 +154,7 @@ export const SettingsView: React.FC = () => {
                 type="text"
                 value={userName}
                 onChange={e => setUserName(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
 
@@ -166,7 +166,7 @@ export const SettingsView: React.FC = () => {
                 type="email"
                 value={userEmail}
                 onChange={e => setUserEmail(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
 
@@ -179,14 +179,14 @@ export const SettingsView: React.FC = () => {
                   type="text"
                   value={businessName}
                   onChange={e => setBusinessName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
                 />
               </div>
             )}
 
             <button
               type="submit"
-              className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-xs font-semibold shadow-lg shadow-violet-600/20 transition-all"
             >
               Update Preferences
             </button>
@@ -206,7 +206,7 @@ export const SettingsView: React.FC = () => {
               onClick={resetToSampleData}
               className="px-3.5 py-2 rounded-xl bg-[#171B25] hover:bg-[#252B38] text-zinc-300 border border-[#252B38] font-semibold text-xs flex items-center gap-1.5 transition-colors"
             >
-              <RotateCcw className="w-3.5 h-3.5 text-blue-400" />
+              <RotateCcw className="w-3.5 h-3.5 text-violet-400" />
               <span>Reload Sample Records</span>
             </button>
           </div>
@@ -265,7 +265,7 @@ export const SettingsView: React.FC = () => {
               User Rights: Export & Erasure
             </h4>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-violet-500/10 border border-violet-500/20">
               <div>
                 <h5 className="text-xs font-bold text-[#F8FAFC]">Download Complete Data Archive (JSON)</h5>
                 <p className="text-[11px] text-[#A1A1AA] mt-0.5">
@@ -274,7 +274,7 @@ export const SettingsView: React.FC = () => {
               </div>
               <button
                 onClick={handleExportAllData}
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-md transition-all shrink-0"
+                className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-md transition-all shrink-0"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Export All Records</span>
@@ -305,7 +305,7 @@ export const SettingsView: React.FC = () => {
         <div className="bg-[#10131A] rounded-3xl border border-[#252B38] shadow-2xl p-6 sm:p-8 space-y-6">
           <div>
             <div className="flex items-center gap-2">
-              <History className="w-4 h-4 text-blue-400" />
+              <History className="w-4 h-4 text-violet-400" />
               <h3 className="text-base font-bold text-[#F8FAFC]">
                 Security & Interaction Audit Trail
               </h3>

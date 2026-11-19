@@ -39,7 +39,7 @@ export const CaseNotes: React.FC<CaseNotesProps> = ({ currentCase, notes }) => {
     <div className="bg-[#10131A] rounded-2xl border border-[#252B38] p-6 space-y-6 shadow-xl">
       <div>
         <div className="flex items-center gap-2">
-          <FileEdit className="w-4 h-4 text-blue-400" />
+          <FileEdit className="w-4 h-4 text-violet-400" />
           <h3 className="text-base font-bold text-[#F8FAFC]">
             Private Workspace Notes
           </h3>
@@ -56,13 +56,13 @@ export const CaseNotes: React.FC<CaseNotesProps> = ({ currentCase, notes }) => {
           value={newNoteContent}
           onChange={e => setNewNoteContent(e.target.value)}
           placeholder="Type an internal note, phone call summary, or personal observation..."
-          className="w-full p-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+          className="w-full p-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
         />
         <div className="flex justify-end">
           <button
             type="submit"
             disabled={!newNoteContent.trim()}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold disabled:opacity-50 transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-xs font-semibold disabled:opacity-50 transition-colors flex items-center gap-1.5 shadow-sm"
           >
             <Plus className="w-3.5 h-3.5 text-white" />
             <span>Save Private Note</span>
@@ -91,7 +91,7 @@ export const CaseNotes: React.FC<CaseNotesProps> = ({ currentCase, notes }) => {
                       rows={3}
                       value={editContent}
                       onChange={e => setEditContent(e.target.value)}
-                      className="w-full p-2.5 bg-[#10131A] border border-[#252B38] rounded-lg text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-2.5 bg-[#10131A] border border-[#252B38] rounded-lg text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
                     />
                     <div className="flex justify-end gap-2">
                       <button
@@ -102,7 +102,7 @@ export const CaseNotes: React.FC<CaseNotesProps> = ({ currentCase, notes }) => {
                       </button>
                       <button
                         onClick={() => handleSaveEdit(note.id)}
-                        className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold transition-colors flex items-center gap-1"
+                        className="px-3 py-1 bg-violet-600 hover:bg-violet-500 text-white rounded-lg text-xs font-semibold transition-colors flex items-center gap-1"
                       >
                         <Check className="w-3 h-3" /> Save
                       </button>
