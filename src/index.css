@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #F8FAFC;
+    background-color: #090B10;
+  }
+
+  body {
+    background-color: #090B10;
+    color: #F8FAFC;
+  }
+}
+
+/* Custom dark scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #10131A;
+}
+::-webkit-scrollbar-thumb {
+  background: #252B38;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Subtle border card helpers */
+.linear-card {
+  background-color: #171B25;
+  border: 1px solid #252B38;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.linear-card:hover {
+  border-color: #323B4E;
+}
+
+/* Print styles for case summary exports */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
