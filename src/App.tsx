@@ -60,7 +60,7 @@ export const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090B10] text-[#F8FAFC] font-sans selection:bg-blue-600/30 selection:text-blue-200">
+    <div className="min-h-screen flex flex-col bg-[#090B10] text-[#F8FAFC] font-sans selection:bg-violet-600/30 selection:text-violet-200">
       {/* Platform Disclaimer Banner */}
       <DisclaimerBanner />
 

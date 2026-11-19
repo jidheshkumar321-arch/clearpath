@@ -59,7 +59,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-blue-400" />
+            <CheckCircle2 className="w-4 h-4 text-violet-400" />
             <h3 className="text-base font-bold text-[#F8FAFC]">
               Action Plan & Next Steps
             </h3>
@@ -71,7 +71,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors self-start sm:self-auto shadow-sm"
+          className="px-3.5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors self-start sm:self-auto shadow-sm"
         >
           <Plus className="w-3.5 h-3.5 text-white" />
           <span>Add Custom Action Step</span>
@@ -98,7 +98,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                     : isRejected
                     ? 'bg-[#171B25]/40 border-[#252B38] opacity-60'
                     : isAccepted
-                    ? 'bg-[#171B25] border-blue-500/40 shadow-sm'
+                    ? 'bg-[#171B25] border-violet-500/40 shadow-sm'
                     : 'bg-[#171B25] border-[#252B38]'
                 }`}
               >
@@ -109,7 +109,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                         isCompleted
                           ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                           : isAccepted
-                          ? 'bg-blue-500/10 text-blue-400 border-blue-500/20'
+                          ? 'bg-violet-500/10 text-violet-400 border-violet-500/20'
                           : isRejected
                           ? 'bg-rose-500/10 text-rose-400 border-rose-500/20'
                           : 'bg-[#10131A] text-zinc-300 border-[#252B38]'
@@ -119,7 +119,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                     </span>
 
                     {plan.is_ai_generated && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/20">
                         <Sparkles className="w-3 h-3" /> AI Recommendation
                       </span>
                     )}
@@ -139,7 +139,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                     {!isAccepted && !isCompleted && !isRejected && (
                       <button
                         onClick={() => updateActionPlanStatus(plan.id, 'accepted')}
-                        className="px-2 py-1 rounded-lg bg-blue-500/15 hover:bg-blue-500/25 text-blue-400 border border-blue-500/30 font-semibold text-[11px] transition-colors"
+                        className="px-2 py-1 rounded-lg bg-violet-500/15 hover:bg-violet-500/25 text-violet-400 border border-violet-500/30 font-semibold text-[11px] transition-colors"
                       >
                         Accept Step
                       </button>
@@ -182,7 +182,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                 {plan.source_reference && (
                   <div className="mt-3 pt-2 border-t border-[#252B38] flex items-center justify-between text-[11px] text-[#A1A1AA]">
                     <span className="flex items-center gap-1">
-                      <BookOpen className="w-3 h-3 text-blue-400" />
+                      <BookOpen className="w-3 h-3 text-violet-400" />
                       Ref: {plan.source_reference}
                     </span>
                     {plan.source_url && (
@@ -190,7 +190,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
                         href={plan.source_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:underline font-semibold flex items-center gap-1"
+                        className="text-violet-400 hover:underline font-semibold flex items-center gap-1"
                       >
                         View Authority <ExternalLink className="w-3 h-3" />
                       </a>
@@ -221,7 +221,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
               value={title}
               onChange={e => setTitle(e.target.value)}
               placeholder="e.g. Issue Formal Written Notice to Principal Nodal Officer"
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -235,7 +235,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
               value={suggestedAction}
               onChange={e => setSuggestedAction(e.target.value)}
               placeholder="e.g. Send chronological timeline to nodal officer giving 72 hours to reconcile the pending transaction before registering a complaint on NCH..."
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -248,7 +248,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
               value={rationale}
               onChange={e => setRationale(e.target.value)}
               placeholder="e.g. Rule 5(4) of E-Commerce Rules or agreed PO Clause 12"
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -262,7 +262,7 @@ export const CaseActionPlan: React.FC<CaseActionPlanProps> = ({ currentCase, act
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Add Step to Workspace
             </button>

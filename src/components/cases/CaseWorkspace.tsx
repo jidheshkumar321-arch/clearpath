@@ -72,7 +72,7 @@ export const CaseWorkspace: React.FC = () => {
         </p>
         <button
           onClick={() => setCurrentView('cases')}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold transition-colors"
+          className="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-xs font-semibold transition-colors"
         >
           Go to Cases
         </button>
@@ -156,9 +156,9 @@ export const CaseWorkspace: React.FC = () => {
           {isClosed ? (
             <button
               onClick={() => reopenCase(currentCase.id)}
-              className="px-3.5 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 hover:bg-blue-500/20 text-xs font-semibold flex items-center gap-1.5 transition-all"
+              className="px-3.5 py-2 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 hover:bg-violet-500/20 text-xs font-semibold flex items-center gap-1.5 transition-all"
             >
-              <RotateCcw className="w-3.5 h-3.5 text-blue-400" />
+              <RotateCcw className="w-3.5 h-3.5 text-violet-400" />
               <span>Reopen Case</span>
             </button>
           ) : (
@@ -237,12 +237,12 @@ export const CaseWorkspace: React.FC = () => {
           <div className="bg-[#171B25] rounded-2xl p-4 border border-[#252B38] flex flex-col gap-2 shrink-0 min-w-[240px]">
             <div className="flex items-center justify-between text-xs">
               <span className="font-bold text-[#F8FAFC] flex items-center gap-1.5">
-                <Bell className="w-3.5 h-3.5 text-blue-400" />
+                <Bell className="w-3.5 h-3.5 text-violet-400" />
                 Case Follow-Ups
               </span>
               <button
                 onClick={() => setIsReminderModalOpen(true)}
-                className="text-blue-400 hover:text-blue-300 font-bold text-[11px] transition-colors"
+                className="text-violet-400 hover:text-violet-300 font-bold text-[11px] transition-colors"
               >
                 + Schedule
               </button>
@@ -260,7 +260,7 @@ export const CaseWorkspace: React.FC = () => {
                     <span className={`text-[11px] truncate max-w-[140px] ${r.completed ? 'line-through text-zinc-500' : 'text-zinc-200 font-medium'}`}>
                       {r.description}
                     </span>
-                    <span className="text-[10px] text-blue-400 font-mono">
+                    <span className="text-[10px] text-violet-400 font-mono">
                       {formatDate(r.reminder_date)}
                     </span>
                   </div>
@@ -279,7 +279,7 @@ export const CaseWorkspace: React.FC = () => {
             {currentCase.description}
           </p>
           {currentCase.target_resolution && (
-            <div className="mt-3 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-xs text-blue-300">
+            <div className="mt-3 p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 text-xs text-violet-300">
               <strong>Desired Resolution Outcome:</strong> {currentCase.target_resolution}
             </div>
           )}
@@ -336,7 +336,7 @@ export const CaseWorkspace: React.FC = () => {
               required
               value={editTitle}
               onChange={e => setEditTitle(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -350,7 +350,7 @@ export const CaseWorkspace: React.FC = () => {
                 required
                 value={editOrg}
                 onChange={e => setEditOrg(e.target.value)}
-                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
             <div>
@@ -361,7 +361,7 @@ export const CaseWorkspace: React.FC = () => {
                 type="text"
                 value={editRef}
                 onChange={e => setEditRef(e.target.value)}
-                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-mono text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-mono text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
               />
             </div>
           </div>
@@ -373,7 +373,7 @@ export const CaseWorkspace: React.FC = () => {
             <select
               value={editStatus}
               onChange={e => setEditStatus(e.target.value as CaseStatus)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="draft">Draft</option>
               <option value="in_progress">In Progress</option>
@@ -394,7 +394,7 @@ export const CaseWorkspace: React.FC = () => {
               required
               value={editDesc}
               onChange={e => setEditDesc(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -408,7 +408,7 @@ export const CaseWorkspace: React.FC = () => {
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Save Changes
             </button>
@@ -433,7 +433,7 @@ export const CaseWorkspace: React.FC = () => {
               required
               value={reminderDate}
               onChange={e => setReminderDate(e.target.value)}
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -447,7 +447,7 @@ export const CaseWorkspace: React.FC = () => {
               value={reminderDesc}
               onChange={e => setReminderDesc(e.target.value)}
               placeholder="e.g. Check tracking or escalate to Grievance Officer if no update received..."
-              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-xs text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -461,7 +461,7 @@ export const CaseWorkspace: React.FC = () => {
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-lg shadow-blue-600/20 transition-all"
+              className="px-5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs shadow-lg shadow-violet-600/20 transition-all"
             >
               Schedule Reminder
             </button>

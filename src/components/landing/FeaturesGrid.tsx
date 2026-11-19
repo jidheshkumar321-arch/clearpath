@@ -58,7 +58,7 @@ export const FeaturesGrid: React.FC = () => {
     <section id="features" className="py-20 bg-[#090B10] border-b border-[#252B38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/25">
+          <span className="text-xs font-bold uppercase tracking-wider text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/25">
             Platform Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight mt-3">
@@ -78,7 +78,7 @@ export const FeaturesGrid: React.FC = () => {
                 className="p-6 rounded-2xl bg-[#171B25] border border-[#252B38] hover:border-[#323B4E] hover:shadow-card transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#10131A] border border-[#252B38] text-blue-400 flex items-center justify-center mb-4 shadow-xs">
+                  <div className="w-10 h-10 rounded-xl bg-[#10131A] border border-[#252B38] text-violet-400 flex items-center justify-center mb-4 shadow-xs">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-base font-bold text-[#F8FAFC] mb-2">

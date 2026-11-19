@@ -57,7 +57,7 @@ export const SignInView: React.FC = () => {
           {/* Environment Banner */}
           <div className="mt-4 p-3 rounded-xl bg-[#171B25] border border-[#252B38] text-left text-xs">
             <div className="flex items-center gap-1.5 font-semibold text-zinc-300">
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <Sparkles className="w-3.5 h-3.5 text-violet-400" />
               <span>Authentication Status:</span>
             </div>
             <p className="text-[11px] text-[#A1A1AA] mt-1">
@@ -77,17 +77,17 @@ export const SignInView: React.FC = () => {
             <button
               type="button"
               onClick={() => handleDemoQuickLogin('individual')}
-              className="py-2.5 px-3 text-xs font-semibold rounded-xl border border-[#252B38] hover:border-blue-500/50 bg-[#171B25] hover:bg-[#1E2430] text-[#F8FAFC] transition-all text-center flex items-center justify-center gap-1.5"
+              className="py-2.5 px-3 text-xs font-semibold rounded-xl border border-[#252B38] hover:border-violet-500/50 bg-[#171B25] hover:bg-[#1E2430] text-[#F8FAFC] transition-all text-center flex items-center justify-center gap-1.5"
             >
-              <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-violet-400" />
               <span>Consumer Demo</span>
             </button>
             <button
               type="button"
               onClick={() => handleDemoQuickLogin('business')}
-              className="py-2.5 px-3 text-xs font-semibold rounded-xl border border-[#252B38] hover:border-indigo-500/50 bg-[#171B25] hover:bg-[#1E2430] text-[#F8FAFC] transition-all text-center flex items-center justify-center gap-1.5"
+              className="py-2.5 px-3 text-xs font-semibold rounded-xl border border-[#252B38] hover:border-purple-500/50 bg-[#171B25] hover:bg-[#1E2430] text-[#F8FAFC] transition-all text-center flex items-center justify-center gap-1.5"
             >
-              <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-purple-400" />
               <span>Business Demo</span>
             </button>
           </div>
@@ -117,7 +117,7 @@ export const SignInView: React.FC = () => {
                 onClick={() => setAccountType('individual')}
                 className={`py-2 px-3 rounded-xl text-xs font-semibold border transition-all ${
                   accountType === 'individual'
-                    ? 'bg-blue-600/15 border-blue-500/40 text-blue-300'
+                    ? 'bg-violet-600/15 border-violet-500/40 text-violet-300'
                     : 'border-[#252B38] text-zinc-400 hover:bg-[#171B25]'
                 }`}
               >
@@ -128,7 +128,7 @@ export const SignInView: React.FC = () => {
                 onClick={() => setAccountType('business')}
                 className={`py-2 px-3 rounded-xl text-xs font-semibold border transition-all ${
                   accountType === 'business'
-                    ? 'bg-indigo-600/15 border-indigo-500/40 text-indigo-300'
+                    ? 'bg-purple-600/15 border-purple-500/40 text-purple-300'
                     : 'border-[#252B38] text-zinc-400 hover:bg-[#171B25]'
                 }`}
               >
@@ -151,7 +151,7 @@ export const SignInView: React.FC = () => {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="you@domain.com"
-                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all"
               />
             </div>
           </div>
@@ -164,7 +164,7 @@ export const SignInView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setCurrentView('recovery')}
-                className="text-xs text-blue-400 hover:text-blue-300 font-semibold"
+                className="text-xs text-violet-400 hover:text-violet-300 font-semibold"
               >
                 Forgot password?
               </button>
@@ -179,7 +179,7 @@ export const SignInView: React.FC = () => {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all"
               />
             </div>
           </div>
@@ -187,10 +187,10 @@ export const SignInView: React.FC = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all flex items-center justify-center gap-2 group disabled:opacity-70 mt-2"
+            className="w-full py-3 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(139, 92, 246,0.3)] transition-all flex items-center justify-center gap-2 group disabled:opacity-70 mt-2"
           >
             <span>{isLoading ? 'Signing in...' : 'Sign in to Workspace'}</span>
-            <ArrowRight className="w-4 h-4 text-blue-200 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-violet-200 group-hover:translate-x-1 transition-transform" />
           </button>
         </form>
 
@@ -199,7 +199,7 @@ export const SignInView: React.FC = () => {
             Don't have an account yet?{' '}
             <button
               onClick={() => setCurrentView('sign-up')}
-              className="font-bold text-blue-400 hover:text-blue-300 underline ml-1"
+              className="font-bold text-violet-400 hover:text-violet-300 underline ml-1"
             >
               Create one now
             </button>

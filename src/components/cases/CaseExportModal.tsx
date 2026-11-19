@@ -97,7 +97,7 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
             </button>
             <button
               onClick={handlePrint}
-              className="px-3.5 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-lg shadow-blue-600/20"
+              className="px-3.5 py-1.5 rounded-lg bg-violet-600 text-white hover:bg-violet-500 text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-lg shadow-violet-600/20"
             >
               <Printer className="w-3.5 h-3.5 text-white" />
               <span>Print / Save as PDF</span>
@@ -108,12 +108,12 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
         {/* Printable Case Dossier Preview */}
         <div className="p-8 bg-[#171B25] border border-[#252B38] rounded-2xl shadow-xl text-zinc-200 space-y-6 text-xs font-sans print:bg-white print:text-black print:border-none print:p-0">
           {/* Header */}
-          <div className="border-b-2 border-blue-500 pb-4 flex items-start justify-between print:border-slate-900">
+          <div className="border-b-2 border-violet-500 pb-4 flex items-start justify-between print:border-slate-900">
             <div>
               <div className="text-lg font-black tracking-tight text-[#F8FAFC] print:text-slate-900">
                 CLEARPATH CASE DOSSIER
               </div>
-              <div className="text-[10px] uppercase font-bold text-blue-400 tracking-wider print:text-slate-500">
+              <div className="text-[10px] uppercase font-bold text-violet-400 tracking-wider print:text-slate-500">
                 Independent Factual Progress Record • Jurisdiction: India
               </div>
             </div>
@@ -145,7 +145,7 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
 
           {/* Issue Statement */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
               1. Issue Overview & Factual Statement
             </h4>
             <h5 className="font-bold text-[#F8FAFC] text-sm mb-1 print:text-slate-900">{currentCase.title}</h5>
@@ -154,7 +154,7 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
 
           {/* Chronological Timeline */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
               2. Chronological Timeline of Recorded Events ({caseEvents.length})
             </h4>
             {caseEvents.length === 0 ? (
@@ -163,7 +163,7 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
               <div className="space-y-2">
                 {caseEvents.map((evt) => (
                   <div key={evt.id} className="p-2.5 rounded bg-[#10131A] border border-[#252B38] flex items-start gap-3 print:bg-slate-50 print:border-slate-100">
-                    <span className="font-mono text-blue-400 font-bold w-24 shrink-0 print:text-slate-600">
+                    <span className="font-mono text-violet-400 font-bold w-24 shrink-0 print:text-slate-600">
                       {formatDate(evt.event_date)}
                     </span>
                     <div className="flex-1">
@@ -192,7 +192,7 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
 
           {/* Evidence Vault */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
               3. Evidence Documents on File ({caseEvidence.length})
             </h4>
             <ul className="list-disc list-inside space-y-1 text-zinc-300 print:text-slate-700">
@@ -206,21 +206,21 @@ export const CaseExportModal: React.FC<CaseExportModalProps> = ({
 
           {/* Action Plan */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400 border-b border-[#252B38] pb-1 mb-2 print:text-slate-900 print:border-slate-200">
               4. Active Action Plan & Regulatory Checkpoints
             </h4>
             <div className="space-y-2">
               {casePlans.map(p => (
                 <div key={p.id} className="p-2.5 rounded bg-[#10131A] border border-[#252B38] print:bg-slate-50 print:border-slate-100">
                   <div className="flex items-center gap-2 font-bold text-[#F8FAFC] print:text-slate-900">
-                    <span className="uppercase text-[10px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 print:bg-slate-200 print:text-slate-700 print:border-none">
+                    <span className="uppercase text-[10px] px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-400 border border-violet-500/20 print:bg-slate-200 print:text-slate-700 print:border-none">
                       {p.approval_status}
                     </span>
                     <span>{p.title}</span>
                   </div>
                   <p className="text-zinc-300 mt-1 print:text-slate-600">{p.suggested_action}</p>
                   {p.source_reference && (
-                    <span className="text-[10px] text-blue-400 block mt-1 print:text-teal-700">
+                    <span className="text-[10px] text-violet-400 block mt-1 print:text-teal-700">
                       Statutory Reference: {p.source_reference}
                     </span>
                   )}

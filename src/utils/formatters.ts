@@ -51,10 +51,10 @@ export function getStatusDetails(status: CaseStatus): {
     case 'in_progress':
       return {
         label: 'In Progress',
-        bg: 'bg-blue-500/15',
-        text: 'text-blue-400',
-        border: 'border-blue-500/30',
-        dot: 'bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]'
+        bg: 'bg-violet-500/15',
+        text: 'text-violet-400',
+        border: 'border-violet-500/30',
+        dot: 'bg-violet-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]'
       };
     case 'waiting_for_response':
       return {

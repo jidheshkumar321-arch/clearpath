@@ -9,7 +9,7 @@ export const AudienceSection: React.FC = () => {
     <section className="py-20 bg-[#10131A] border-b border-[#252B38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/25">
+          <span className="text-xs font-bold uppercase tracking-wider text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/25">
             Tailored Workspaces
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight mt-3">
@@ -26,7 +26,7 @@ export const AudienceSection: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center">
                     <User className="w-6 h-6" />
                   </div>
                   <div>
@@ -34,7 +34,7 @@ export const AudienceSection: React.FC = () => {
                     <p className="text-xs text-[#A1A1AA]">Personal consumer grievances & purchases</p>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-300 border border-blue-500/30">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-violet-500/15 text-violet-300 border border-violet-500/30">
                   Consumer Protection
                 </span>
               </div>
@@ -45,7 +45,7 @@ export const AudienceSection: React.FC = () => {
 
               <div className="space-y-3.5 mb-8">
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0 mt-0.5 border border-blue-500/30">
+                  <span className="w-5 h-5 rounded-full bg-violet-500/15 text-violet-400 flex items-center justify-center shrink-0 mt-0.5 border border-violet-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -53,7 +53,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0 mt-0.5 border border-blue-500/30">
+                  <span className="w-5 h-5 rounded-full bg-violet-500/15 text-violet-400 flex items-center justify-center shrink-0 mt-0.5 border border-violet-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -61,7 +61,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0 mt-0.5 border border-blue-500/30">
+                  <span className="w-5 h-5 rounded-full bg-violet-500/15 text-violet-400 flex items-center justify-center shrink-0 mt-0.5 border border-violet-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -69,7 +69,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0 mt-0.5 border border-blue-500/30">
+                  <span className="w-5 h-5 rounded-full bg-violet-500/15 text-violet-400 flex items-center justify-center shrink-0 mt-0.5 border border-violet-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -84,10 +84,10 @@ export const AudienceSection: React.FC = () => {
                 signIn('consumer@clearpath.workspace', 'Arjun Mehta', 'individual');
                 setCurrentView('dashboard');
               }}
-              className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+              className="w-full py-3 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(139, 92, 246,0.25)]"
             >
               <span>Start Personal Workspace</span>
-              <ArrowRight className="w-4 h-4 text-blue-200" />
+              <ArrowRight className="w-4 h-4 text-violet-200" />
             </button>
           </div>
 
@@ -96,7 +96,7 @@ export const AudienceSection: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center">
                     <Building className="w-6 h-6" />
                   </div>
                   <div>
@@ -104,7 +104,7 @@ export const AudienceSection: React.FC = () => {
                     <p className="text-xs text-[#A1A1AA]">Commercial vendor, SaaS & supplier operations</p>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/30">
                   B2B Operations
                 </span>
               </div>
@@ -115,7 +115,7 @@ export const AudienceSection: React.FC = () => {
 
               <div className="space-y-3.5 mb-8">
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-500/30">
+                  <span className="w-5 h-5 rounded-full bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0 mt-0.5 border border-purple-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -123,7 +123,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-500/30">
+                  <span className="w-5 h-5 rounded-full bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0 mt-0.5 border border-purple-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -131,7 +131,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-500/30">
+                  <span className="w-5 h-5 rounded-full bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0 mt-0.5 border border-purple-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -139,7 +139,7 @@ export const AudienceSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-xs text-zinc-300">
-                  <span className="w-5 h-5 rounded-full bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-500/30">
+                  <span className="w-5 h-5 rounded-full bg-purple-500/15 text-purple-400 flex items-center justify-center shrink-0 mt-0.5 border border-purple-500/30">
                     <Check className="w-3.5 h-3.5" />
                   </span>
                   <div>
@@ -157,7 +157,7 @@ export const AudienceSection: React.FC = () => {
               className="w-full py-3 px-4 rounded-xl bg-[#10131A] hover:bg-[#1E2430] text-[#F8FAFC] border border-[#252B38] font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-soft"
             >
               <span>Explore Small Business Mode</span>
-              <ArrowRight className="w-4 h-4 text-blue-400" />
+              <ArrowRight className="w-4 h-4 text-violet-400" />
             </button>
           </div>
         </div>

@@ -68,7 +68,7 @@ export const CaseList: React.FC = () => {
 
         <button
           onClick={() => setCurrentView('create-case')}
-          className="self-start sm:self-auto px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/20 transition-all flex items-center gap-2"
+          className="self-start sm:self-auto px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-lg shadow-violet-600/20 transition-all flex items-center gap-2"
         >
           <PlusCircle className="w-4 h-4 text-white" />
           <span>Create New Case</span>
@@ -88,7 +88,7 @@ export const CaseList: React.FC = () => {
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search by title, organisation, order reference or keywords..."
-              className="w-full pl-9 pr-4 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-[#A1A1AA] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full pl-9 pr-4 py-2 bg-[#171B25] border border-[#252B38] rounded-xl text-sm text-[#F8FAFC] placeholder-[#A1A1AA] focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
             />
           </div>
 
@@ -97,7 +97,7 @@ export const CaseList: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={e => setSelectedCategory(e.target.value)}
-              className="w-full md:w-48 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full md:w-48 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="all">All Categories</option>
               <option value="delayed_delivery">Delayed Delivery</option>
@@ -114,7 +114,7 @@ export const CaseList: React.FC = () => {
             <select
               value={selectedStatus}
               onChange={e => setSelectedStatus(e.target.value)}
-              className="w-full md:w-48 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full md:w-48 py-2 px-3 bg-[#171B25] border border-[#252B38] rounded-xl text-xs font-semibold text-zinc-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
             >
               <option value="all">All Statuses</option>
               <option value="draft">Draft</option>
@@ -165,7 +165,7 @@ export const CaseList: React.FC = () => {
               </span>
             )}
             {selectedCategory !== 'all' && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20">
                 {selectedCategory.replace('_', ' ')}
                 <button onClick={() => setSelectedCategory('all')} className="hover:text-rose-400">×</button>
               </span>
@@ -224,7 +224,7 @@ export const CaseList: React.FC = () => {
             return (
               <div
                 key={c.id}
-                className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#3B82F6]/50 transition-all flex flex-col justify-between group"
+                className="bg-[#171B25] rounded-2xl border border-[#252B38] hover:border-[#8B5CF6]/50 transition-all flex flex-col justify-between group"
               >
                 <div className="p-5 space-y-3">
                   {/* Top tags */}
@@ -245,7 +245,7 @@ export const CaseList: React.FC = () => {
                   <div>
                     <h3
                       onClick={() => openCaseWorkspace(c.id)}
-                      className="text-base font-bold text-[#F8FAFC] group-hover:text-blue-400 cursor-pointer transition-colors line-clamp-2"
+                      className="text-base font-bold text-[#F8FAFC] group-hover:text-violet-400 cursor-pointer transition-colors line-clamp-2"
                     >
                       {c.title}
                     </h3>
@@ -298,7 +298,7 @@ export const CaseList: React.FC = () => {
 
                   <button
                     onClick={() => openCaseWorkspace(c.id)}
-                    className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-all shadow-sm"
+                    className="px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-all shadow-sm"
                   >
                     <span>Open Case</span>
                     <ArrowRight className="w-3.5 h-3.5 text-white" />
@@ -343,7 +343,7 @@ export const CaseList: React.FC = () => {
                         </span>
                       </td>
                       <td className="py-3.5 px-4">
-                        <div className="font-bold text-[#F8FAFC] hover:text-blue-400 transition-colors">
+                        <div className="font-bold text-[#F8FAFC] hover:text-violet-400 transition-colors">
                           {c.title}
                         </div>
                         <div className="text-[#A1A1AA] text-[11px]">
@@ -367,7 +367,7 @@ export const CaseList: React.FC = () => {
                             e.stopPropagation();
                             openCaseWorkspace(c.id);
                           }}
-                          className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-colors"
+                          className="px-3 py-1 bg-violet-600 hover:bg-violet-500 text-white rounded-lg font-semibold transition-colors"
                         >
                           Workspace
                         </button>

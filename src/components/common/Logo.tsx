@@ -29,7 +29,7 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
       {/* Path / Checkpoint Symbol */}
       <div className={`relative flex items-center justify-center rounded-xl transition-transform hover:scale-105 border border-[#252B38] ${iconSizes[size]} ${
-        inverted ? 'bg-white text-[#090B10] shadow-md' : 'bg-gradient-to-br from-[#10131A] to-[#171B25] text-white shadow-soft shadow-blue-500/10'
+        inverted ? 'bg-white text-[#090B10] shadow-md' : 'bg-gradient-to-br from-[#10131A] to-[#171B25] text-white shadow-soft shadow-violet-500/10'
       }`}>
         <svg
           viewBox="0 0 28 28"
@@ -47,10 +47,10 @@ export const Logo: React.FC<LogoProps> = ({
             className={inverted ? 'text-slate-900' : 'text-slate-400'}
           />
           {/* Active checkpoints along the path */}
-          <circle cx="5" cy="21" r="2.5" fill="#60A5FA" />
-          <circle cx="11" cy="15" r="2.5" fill="#3B82F6" />
-          <circle cx="17" cy="19" r="2.5" fill="#60A5FA" />
-          <circle cx="23" cy="7" r="3" fill="#3B82F6" stroke="#090B10" strokeWidth="1.5" />
+          <circle cx="5" cy="21" r="2.5" fill="#A78BFA" />
+          <circle cx="11" cy="15" r="2.5" fill="#8B5CF6" />
+          <circle cx="17" cy="19" r="2.5" fill="#A78BFA" />
+          <circle cx="23" cy="7" r="3" fill="#8B5CF6" stroke="#090B10" strokeWidth="1.5" />
         </svg>
       </div>
 
@@ -60,7 +60,7 @@ export const Logo: React.FC<LogoProps> = ({
             inverted ? 'text-slate-900' : 'text-[#F8FAFC]'
           }`}
         >
-          CLEAR<span className="text-blue-500 font-black">PATH</span>
+          CLEAR<span className="text-violet-500 font-black">PATH</span>
         </span>
         {withTagline && (
           <span className={`text-[10px] uppercase font-bold tracking-wider mt-1 ${

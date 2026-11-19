@@ -49,7 +49,7 @@ export const SignUpView: React.FC = () => {
     return (
       <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[#090B10]">
         <div className="max-w-md w-full bg-[#10131A] p-8 rounded-3xl border border-[#252B38] shadow-elevated text-center space-y-6">
-          <div className="w-16 h-16 rounded-2xl bg-blue-500/15 border border-blue-500/30 text-blue-400 mx-auto flex items-center justify-center">
+          <div className="w-16 h-16 rounded-2xl bg-violet-500/15 border border-violet-500/30 text-violet-400 mx-auto flex items-center justify-center">
             <Mail className="w-8 h-8" />
           </div>
           <div>
@@ -64,7 +64,7 @@ export const SignUpView: React.FC = () => {
 
           <div className="p-4 rounded-xl bg-[#171B25] border border-[#252B38] text-xs text-zinc-300 text-left space-y-1.5">
             <div className="flex items-center gap-1.5 font-bold text-[#F8FAFC]">
-              <ShieldCheck className="w-4 h-4 text-blue-400" />
+              <ShieldCheck className="w-4 h-4 text-violet-400" />
               <span>Simulated Verification Protocol:</span>
             </div>
             <p className="text-[11px] text-[#A1A1AA]">
@@ -74,10 +74,10 @@ export const SignUpView: React.FC = () => {
 
           <button
             onClick={handleSimulateVerify}
-            className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all flex items-center justify-center gap-2"
+            className="w-full py-3 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(139, 92, 246,0.3)] transition-all flex items-center justify-center gap-2"
           >
             <span>Simulate Verification & Enter Workspace</span>
-            <ArrowRight className="w-4 h-4 text-blue-200" />
+            <ArrowRight className="w-4 h-4 text-violet-200" />
           </button>
 
           <button
@@ -124,7 +124,7 @@ export const SignUpView: React.FC = () => {
                 onClick={() => setAccountType('individual')}
                 className={`py-2 px-3 rounded-xl text-xs font-semibold border flex items-center justify-center gap-1.5 transition-all ${
                   accountType === 'individual'
-                    ? 'bg-blue-600/15 border-blue-500/40 text-blue-300'
+                    ? 'bg-violet-600/15 border-violet-500/40 text-violet-300'
                     : 'border-[#252B38] text-zinc-400 hover:bg-[#171B25]'
                 }`}
               >
@@ -136,7 +136,7 @@ export const SignUpView: React.FC = () => {
                 onClick={() => setAccountType('business')}
                 className={`py-2 px-3 rounded-xl text-xs font-semibold border flex items-center justify-center gap-1.5 transition-all ${
                   accountType === 'business'
-                    ? 'bg-indigo-600/15 border-indigo-500/40 text-indigo-300'
+                    ? 'bg-purple-600/15 border-purple-500/40 text-purple-300'
                     : 'border-[#252B38] text-zinc-400 hover:bg-[#171B25]'
                 }`}
               >
@@ -160,7 +160,7 @@ export const SignUpView: React.FC = () => {
                 value={name}
                 onChange={e => setName(e.target.value)}
                 placeholder={accountType === 'business' ? 'e.g. Priya Sharma' : 'e.g. Arjun Mehta'}
-                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
               />
             </div>
           </div>
@@ -179,7 +179,7 @@ export const SignUpView: React.FC = () => {
                   value={businessName}
                   onChange={e => setBusinessName(e.target.value)}
                   placeholder="e.g. Mehta Artisan Goods"
-                  className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
                 />
               </div>
             </div>
@@ -199,7 +199,7 @@ export const SignUpView: React.FC = () => {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="you@domain.com"
-                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
               />
             </div>
           </div>
@@ -218,7 +218,7 @@ export const SignUpView: React.FC = () => {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="Minimum 8 characters"
-                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full pl-10 pr-3.5 py-2.5 bg-[#171B25] border border-[#252B38] rounded-xl text-xs sm:text-sm text-[#F8FAFC] placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
               />
             </div>
           </div>
@@ -229,7 +229,7 @@ export const SignUpView: React.FC = () => {
                 type="checkbox"
                 checked={agreedToTerms}
                 onChange={e => setAgreedToTerms(e.target.checked)}
-                className="mt-0.5 w-4 h-4 text-blue-500 rounded border-[#252B38] bg-[#171B25] focus:ring-blue-500"
+                className="mt-0.5 w-4 h-4 text-violet-500 rounded border-[#252B38] bg-[#171B25] focus:ring-violet-500"
               />
               <span className="text-xs text-[#A1A1AA] leading-normal">
                 I understand that CLEARPATH is an independent productivity workspace and does not provide legal representation or guaranteed dispute resolutions.
@@ -239,10 +239,10 @@ export const SignUpView: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all flex items-center justify-center gap-2 group mt-2"
+            className="w-full py-3 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(139, 92, 246,0.3)] transition-all flex items-center justify-center gap-2 group mt-2"
           >
             <span>Create Account</span>
-            <ArrowRight className="w-4 h-4 text-blue-200 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-violet-200 group-hover:translate-x-1 transition-transform" />
           </button>
         </form>
 
@@ -251,7 +251,7 @@ export const SignUpView: React.FC = () => {
             Already have an account?{' '}
             <button
               onClick={() => setCurrentView('sign-in')}
-              className="font-bold text-blue-400 hover:text-blue-300 underline ml-1"
+              className="font-bold text-violet-400 hover:text-violet-300 underline ml-1"
             >
               Sign in
             </button>
